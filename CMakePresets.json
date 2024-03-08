@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "Default",
+            "displayName": "Visual Studio Community 2022 Release - amd64",
+            "description": "Using compilers for Visual Studio 17 2022 (x64 architecture)",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "host=x64",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "QT_QMAKE_EXECUTABLE": "D:/Qt/6.7.0/msvc2019_64/bin/qmake.exe",
+                "CMAKE_PREFIX_PATH": "D:/Qt/6.7.0/msvc2019_64"
+                
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Default-debug",
+            "displayName": "Visual Studio Community 2022 Release - amd64 - Debug",
+            "configurePreset": "Default",
+            "configuration": "Debug"
+        }
+    ]
+}
